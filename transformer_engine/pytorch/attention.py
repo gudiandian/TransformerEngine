@@ -724,6 +724,7 @@ class AttnFuncWithCP(torch.autograd.Function):
                                     softmax_scale,
                                     causal=True,
                                     return_softmax=False,
+                                    block_table=None,
                                     **fa_optional_forward_kwargs,
                                 )
                         elif i <= rank:
@@ -811,6 +812,7 @@ class AttnFuncWithCP(torch.autograd.Function):
                                     softmax_scale,
                                     causal=False,
                                     return_softmax=False,
+                                    block_table=None,
                                     **fa_optional_forward_kwargs,
                                 )
                         else:
@@ -901,6 +903,7 @@ class AttnFuncWithCP(torch.autograd.Function):
                                     softmax_scale,
                                     causal=False,
                                     return_softmax=False,
+                                    block_table=None,
                                     **fa_optional_forward_kwargs,
                                 )
                     else:
@@ -964,6 +967,7 @@ class AttnFuncWithCP(torch.autograd.Function):
                                 softmax_scale,
                                 causal=False,
                                 return_softmax=False,
+                                block_table=None,
                                 **fa_optional_forward_kwargs,
                             )
 
